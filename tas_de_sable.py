@@ -11,14 +11,16 @@
 
 import tkinter as tk
 
-### Définition des constantes
+### Définitions des constantes
 
 # Hauteur du canevas
 HAUTEUR = 600
 # Largeur du canevas
 LARGEUR = 600
 
-### Fonctions
+### Définitions des variables globales
+
+### Définitions des Fonctions
 
 
 ### Programme principal
