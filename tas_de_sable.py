@@ -2,7 +2,7 @@
 # groupe BI 2
 # Guillaume EMERDJIAN
 # Victor DE BAETS
-# Lhéa OSTER
+# Léa OSTER
 # Maxime BOUAMRA
 # https://github.com/uvsq22107719/projet_1
 #########################################
@@ -14,10 +14,16 @@ import random
 
 ### Définitions des constantes
 
-# Hauteur du canevas
-HAUTEUR = 600
-# Largeur du canevas
-LARGEUR = 600
+WINDOW_WIDTH, WINDOW_HEIGHT = 600, 400
+
+
+root = tk.Tk()
+
+window = tk.Canvas(root, width = WINDOW_WIDTH, height = WINDOW_HEIGHT, bg="black")
+
+root.title("Truc pour faire des Dessins")
+window.grid (row = 1, column = 1, rowspan=3)
+
 
 ### Définitions des variables globales
 
@@ -53,3 +59,16 @@ while cpt > 0:
     mat.append(random.sample(range(1,10), taille))
     cpt -= 1
 print(mat)
+
+
+
+
+
+
+
+
+
+# Hauteur du canevas
+HAUTEUR = 600
+# Largeur du canevas
+LARGEUR = 600
