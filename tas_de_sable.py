@@ -6,3 +6,33 @@
 # Maxime BOUAMRA
 # https://github.com/uvsq22107719/projet_1
 #########################################
+
+### Import des librairies
+
+import tkinter as tk
+
+### Définition des constantes
+
+# Hauteur du canevas
+HAUTEUR = 600
+# Largeur du canevas
+LARGEUR = 600
+
+### Fonctions
+
+
+### Programme principal
+
+
+# Définition des widgets
+racine = tk.Tk()
+racine.title("Tas de sable")
+canvas = tk.Canvas(racine, width = LARGEUR, heigh = HAUTEUR)
+bouton = tk.Button(racine, text="Configuration aléatoire")
+
+# Placement des widgets
+canvas.grid(column=0, row=0)
+bouton.grid(column=0, row=1)
+
+# Boucle principale
+racine.mainloop()
