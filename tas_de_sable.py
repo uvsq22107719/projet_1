@@ -36,5 +36,21 @@ bouton = tk.Button(racine, text="Configuration aléatoire")
 canvas.grid(column=0, row=0)
 bouton.grid(column=0, row=1)
 
+
+
 # Boucle principale
 racine.mainloop()
+
+
+taille =int(input("taille de la matrice"))
+mat=[]
+for i in range(taille):
+    ligne=[]
+    for j in range(taille):
+        value = input("entier")
+        if '.' not in value:
+            ligne.append(int(value))
+
+    mat.append(ligne)
+
+print(mat)
