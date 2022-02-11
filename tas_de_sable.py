@@ -10,6 +10,7 @@
 ### Import des librairies
 
 import tkinter as tk
+import random
 
 ### Définitions des constantes
 
@@ -20,7 +21,10 @@ LARGEUR = 600
 
 ### Définitions des variables globales
 
-### Définitions des Fonctions
+taille = 3
+
+### Définitions des fonctions
+
 
 
 ### Programme principal
@@ -33,24 +37,19 @@ canvas = tk.Canvas(racine, width = LARGEUR, heigh = HAUTEUR)
 bouton = tk.Button(racine, text="Configuration aléatoire")
 
 # Placement des widgets
-canvas.grid(column=0, row=0)
-bouton.grid(column=0, row=1)
-
+canvas.grid(column = 0, row = 0)
+bouton.grid(column = 0, row = 1)
 
 
 # Boucle principale
 racine.mainloop()
 
 
-taille =int(input("taille de la matrice"))
-mat=[]
-for i in range(taille):
-    ligne=[]
-    for j in range(taille):
-        value = input("entier")
-        if '.' not in value:
-            ligne.append(int(value))
 
-    mat.append(ligne)
-
+mat = []
+ligne = []
+cpt = taille
+while cpt > 0:
+    mat.append(random.sample(range(1,10), taille))
+    cpt -= 1
 print(mat)
