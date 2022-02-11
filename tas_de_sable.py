@@ -13,10 +13,16 @@ import tkinter as tk
 
 ### Définitions des constantes
 
-# Hauteur du canevas
-HAUTEUR = 600
-# Largeur du canevas
-LARGEUR = 600
+WINDOW_WIDTH, WINDOW_HEIGHT = 600, 400
+
+
+root = tk.Tk()
+
+window = tk.Canvas(root, width = WINDOW_WIDTH, height = WINDOW_HEIGHT, bg="black")
+
+root.title("Truc pour faire des Dessins")
+window.grid (row = 1, column = 1, rowspan=3)
+
 
 ### Définitions des variables globales
 
@@ -54,3 +60,19 @@ for i in range(taille):
     mat.append(ligne)
 
 print(mat)
+
+
+root.mainloop()
+
+
+
+
+
+
+
+
+
+# Hauteur du canevas
+HAUTEUR = 600
+# Largeur du canevas
+LARGEUR = 600
