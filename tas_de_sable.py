@@ -55,7 +55,7 @@ def creer_grille(mat):
                 # activeoutline = "red" : bordure rouge si le rectangle est visé avec la souris
                 canvas.create_rectangle((chiffre * 30, ligne * 30),((chiffre + 1) * 30, (ligne + 1) * 30), activeoutline = "red", fill = "#FFFFFF") # Pas de sable, blanc
             elif mat[ligne][chiffre] == 1: # Si le chiffre est 1, couleur qui se rapproche du jaune
-                canvas.create_rectangle((chiffre * 30, ligne * 30),((chiffre + 1) * 30, (ligne + 1) * 30), activeoutline = "red", fill = "#FFFBC8")
+                canvas.create_rectangle((chiffre * 30, ligne * 30),((chiffre + 1) * 30, (ligne + 1) * 30), activeoutline = "red", fill = "#FFFBC8") # Couleurs : code hexadécimal
             elif mat[ligne][chiffre] == 2:
                 canvas.create_rectangle((chiffre * 30, ligne * 30),((chiffre + 1) * 30, (ligne + 1) * 30), activeoutline = "red", fill = "#FFF796")
             elif mat[ligne][chiffre] == 3:
@@ -83,7 +83,7 @@ racine = tk.Tk()
 racine.title("Tas de sable")
 canvas = tk.Canvas(racine, width = LARGEUR, height = HAUTEUR)
 config_courante() # Création de la grille de départ, sans sable
-bouton1 = tk.Button(racine, text = "Configuration aléatoire", command = config_aleatoire)
+bouton1 = tk.Button(racine, text = "Configuration aléatoire", command = config_aleatoire) # Bouton "Configuration aléatoire" qui génère une matrice aléatoire et crée la grille
 #bouton2 = 
 
 # Placement des widgets
